@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <div id="startScreen">
+    <h1>Quiz Challenge</h1>
+    <p>Answer multiple choice questions before time runs out.</p>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  
+  <div id="gameScreen">
+    <p>Score: <span id="score">0</span></p>
+    <p>Time Left: <span id="time">30</span>s</p>
+
+    <h2 id="question"></h2>
+
+    <div id="options"></div>
+  </div>
+
+ 
+  <div id="gameOverScreen">
+    <h2>Game Over</h2>
+    <p>Your Final Score: <span id="finalScore"></span></p>
+    <button id="restartBtn">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

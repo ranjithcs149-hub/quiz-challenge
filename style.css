@@ -1,0 +1,160 @@
+
+:root {
+  --primary: #2563eb;
+  --secondary: #1e293b;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+
+#startScreen,
+#gameScreen,
+#gameOverScreen {
+  background: var(--card);
+  width: 90%;
+  max-width: 520px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+#gameScreen,
+#gameOverScreen {
+  display: none;
+}
+
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+
+#gameScreen p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#time {
+  color: var(--danger);
+}
+
+
+#question {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+
+#options {
+  display: grid;
+  gap: 12px;
+}
+
+#options button {
+  background: #e0e7ff;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+#options button:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+
+#gameOverScreen h2 {
+  color: var(--danger);
+}
+
+#finalScore {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #question {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
