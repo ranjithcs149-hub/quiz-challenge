@@ -74,5 +74,5 @@ Dynamic updates of questions, score, timer, and screen visibility using JavaScri
 Button click events for starting the quiz, selecting answers, and restarting the game.
 
 ## GitHub Repository Link:
-
+https://github.com/ranjithcs149-hub/quiz-challenge
 
